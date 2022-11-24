@@ -12,6 +12,10 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+% \usepackage{xcolor}
+\usepackage{xcolor}
+\newcommand{\iu}{{i\mkern1mu}}
+
 
 \title[presentation]{DESCRIPTION OF THE WOBBLING MOTION THROUGH A BOSON METHOD}
 \author{Robert Poenaru}
@@ -106,7 +110,7 @@
   \begin{itemize}
     \item Collective effect $\rightarrow$ \emph{unique} to triaxial nuclei.
     \item Predicted almost 50 years ago, first experimental confirmation: in 2001 (Odegard et al.) for $^{163}$Lu.
-    \item In present, few wobblers are experimentally confirmed in the mass regions: $A\approx130,160,180$ $\rightarrow$ A list of all known wobblers will be available in my PhD thesis (Chapter 3). 
+    \item In present, few wobblers are experimentally confirmed in the mass regions: $A\approx130,160,180$ $\rightarrow$ {\color{brown}A list of all known wobblers will be available in my PhD thesis (Chapter 3)}. 
   \end{itemize}
 \end{block}
 
@@ -206,8 +210,29 @@ $A_k\rightarrow$ inertia parameters: $A_k=(2\mathcal{I}_k)^{-1}$.
 \begin{frame}
   \frametitle{Theoretical Formalism - Rotational Hamiltonian}
 
-  
+  Expanding $\hat{I}_2$ up to first order (particle is \emph{rigidly coupled} to the core):
+  \begin{align}
+    \hat{I}_2=I\left(1-\frac{1}{2}\frac{\hat{I}_1^2+\hat{I}_3^2}{I^2}\right)\ ,
+  \end{align}
+can help re-write the initial Hamiltonian. % $I$ is the \textbf{total angular momentum of the nucleus}.
+\begin{align}
+  \hat{H}_\text{rot}={\color{red}AH'}+{\color{blue}H_{sp}}+{\color{magenta}\text{Spin-term}}
+\end{align}
+with:
+\begin{align}
+  {\color{red}H'}&=\hat{I}_2^2+u\hat{I}_3^2+2v_0\hat{I}_1\ ,\\
+  {\color{blue}H_{sp}}&=\sum_{k=1}^3A_k\hat{j}_k^2\ ,\\
+  {\color{magenta}\text{Spin-term}}&=A_1I^2-A_2j_2I\ .
+\end{align}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Rotational Hamiltonian}
+  $H'$ looks like the Hamiltonian for a triaxial rigid rotator + constrained (cranked) to move along the $1$-axis. The a.m. algebra is defined as:
+\begin{align}
+  \hat{I}_\pm=\hat{I}_2\pm \iu\hat{I}_3\ &,\ \hat{I}_0=\hat{I}_1\ ,\\
+  \left[\hat{I}_-,\hat{I}_+\right]=2\hat{I}_0\ &,\ \left[\hat{I}_\mp,\hat{I}_0\right]=\mp\hat{I}_\mp\ .
+\end{align}
 \end{frame}
 
 \end{document}
