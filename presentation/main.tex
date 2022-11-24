@@ -9,8 +9,9 @@
   \setbeamertemplate{caption}[numbered]
 } 
 
+\usepackage{physics}
 \usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 % \usepackage{xcolor}
 \usepackage{xcolor}
@@ -144,7 +145,9 @@
   \begin{columns} 
   \column{.5\textwidth} 
   \begin{block}{Wobbling bands}
-    Sequences of $\Delta I=2\hbar$ rotational bands that are built on different \textit{wobbling phonon excitations}.
+    Sequences of $\Delta I=2\hbar$ rotational bands that are built on different \textit{wobbling phonon excitations} ($n_w=0,1,\dots$).
+
+    Oscillatory behavior, with a \emph{tilting angle} for the angular momentum proportional to $n_w$ $\longrightarrow$ \textbf{harmonic-like motion}.
   \end{block}
   
   \column{.5\textwidth}
@@ -237,6 +240,81 @@ With this angular momentum algebra, $H'$ becomes:
 \begin{align}
   H'=a\left(\hat{I}_+^2+\hat{I}_-^2\right)+b\left(\hat{I}_+\hat{I}_-+\hat{I}_-\hat{I}_+\right)+c\hat{I}_0.
 \end{align}
+% \begin{block}{Schrodinger Equation}
+%   \begin{align}    
+%     H'\ket{\Psi}=E\ket{\Psi}
+%   \end{align}
+% \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Angular Momentum Representation}
+  The a.m. ladder operators are re-defined in terms of new variables ${\color{brown}q},{\color{blue}d/dq}$:
+  \begin{align}
+    \hat{I}_\mp=\iu\frac{{\color{brown}c}\pm {\color{brown}d}}{\color{brown}s}\left(I\mp\hat{I}_0\right)\ ,\ \hat{I}_0=I{\color{brown}cd}-{\color{brown}s}{\color{blue}\frac{d}{dq}}\ ,
+  \end{align}
+  where $s,c,d$ as the \textbf{Jacobi Elliptic Functions}:
+    \begin{align}
+      s=\text{sn}({\color{brown}q},k)\ ,\ c=\text{cn}({\color{brown}q},k)\ ,\ d=\text{dn}({\color{brown}q},k)\ ,
+    \end{align}
+  \begin{figure}
+    \includegraphics[scale=0.17]{figures/jacobi-functions.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Coordinate representation}
+  The variable $q$ is defined in terms of $k$ ($0<k^2<1$):
+\begin{align}
+  q&=\int_0^\varphi\left(1-k^2\sin^2(t)\right)^{-1/2}dt=F(\varphi,k)\ ,\ \varphi=F^{-1}(q,k)\ ,\\
+  s&=\sin\varphi\ ,\ c=\cos\varphi\ ,\ d=\sqrt{1-k^2s^2}\ .
+\end{align}
+\begin{exampleblock}{New Hamiltonian}
+  \begin{align}
+      H'=-\frac{d^2}{dq^2}-s\frac{d}{dq}+I(I+1)s^2k^2+cdI
+  \end{align}
+  with the associated \emph{Schrodinger Equation} (fully separated Kinetic and Potential terms):
+  \begin{align}
+    \left[\frac{d^2}{dq^2}+V(q)\right]\Psi=E\Psi
+  \end{align}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The "Elliptic" Potential}
+\begin{block}{The expression of $V(q)$}
+  With the elliptic functions $s,c,d$, and arbitrary $k$:
+  \begin{align}
+    V(q)&=\left[I(I+1)k^2+v_0^2\right]s^2+(2I+1)v_0cd\ .   
+  \end{align}
+\end{block}
+\begin{figure}
+  \includegraphics[width=0.48\textwidth]{figures/potential-1.png}
+  \includegraphics[width=0.48\textwidth]{figures/potential-2.png}
+  % \includegraphics[width=0.3\textwidth]{figures/potential-3.png}
+\end{figure}
+Local minima states: meta-stable. \emph{Deepest well} states: degenerate.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Bargman Mapping - Boson description}
+
+The variables $q$ and $d/dq$ can be mapped to a pair of \textbf{boson operators} ($b,b^\dagger$) via the Bargmann representation of the angular momentum:
+\begin{align}
+  q\rightarrow b^\dagger\ ,\ \frac{d}{dq}\rightarrow b\ .
+\end{align}
+\begin{block}{New Angular momentum operators}
+  This mapping leads to \emph{the first boson expansion of the angular momentum components in literature}.
+  \begin{align}
+    \hat{I}_+&=\iu\frac{cb^\dagger-db^\dagger}{sb^\dagger}\left(I+Icb^\dagger db^\dagger-sb^\dagger b\right)\ ,\\
+    \hat{I}_-&=\iu\frac{cb^\dagger+db^\dagger}{sb^\dagger}\left(I-Icb^\dagger db^\dagger+sb^\dagger b\right)\ ,\\
+    \hat{I}_0&=Icb^\dagger db^\dagger-sb^\dagger b\ .
+  \end{align}
+  
+\end{block}
+
 \end{frame}
 
 \end{document}
