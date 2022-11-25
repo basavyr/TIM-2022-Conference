@@ -3,9 +3,5 @@
 \beamer@sectionintoc {2}{Triaxial Shapes}{6}{0}{2}
 \beamer@sectionintoc {3}{Wobbling motion}{9}{0}{3}
 \beamer@sectionintoc {4}{Theoretical formalism}{12}{0}{4}
-\beamer@subsectionintoc {4}{1}{Hamiltonian}{12}{0}{4}
-\beamer@subsectionintoc {4}{2}{Angular momentum}{15}{0}{4}
-\beamer@subsectionintoc {4}{3}{Elliptic potential}{18}{0}{4}
-\beamer@subsectionintoc {4}{4}{Boson description for the a.m.}{19}{0}{4}
 \beamer@sectionintoc {5}{Numerical application - energy spectrum}{22}{0}{5}
 \beamer@sectionintoc {6}{Conclusions}{25}{0}{6}
